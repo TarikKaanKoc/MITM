@@ -3,7 +3,7 @@ import time
 import optparse as parse
 
 
-# Getting target mac address
+# Getting target mac address/
 def get_target_mac_address(ip):
         arp_request_packet = scapy.ARP(pdst=ip)
         broadcast_packet = scapy.Ether(dst="ff:ff:ff:ff:ff:ff") # Regex
