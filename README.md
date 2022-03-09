@@ -1,6 +1,7 @@
 # Man In The Mıddle Attack -- ARP POISONING ( English )
 
-## Introduction :
+
+# Introduction :
 - Man In The Middle Attack implies an active attack where the attacker/Hacker creates a connection between the victims and sends messages between them or may capture all the data packets from the victims. In this case, the victims think that they are communicating with each other, but in reality, the malicious attacker/hacker controls the communication i.e. a third person exists to control and monitor the traffic of communication between the two parties i.e. Client and Server.
 
 ###  Types of Man In The Middle Attack :
@@ -71,3 +72,32 @@ Victim Machine (Windows Machine) –
 
 ### <a href="https://github.com/TarikKaanKoc/Net-Scanner-Tool">Click</a> for NET-SCANNER Tool.
 
+##### `Step-4:`
+
+* To perform the attack, we run the tool I wrote in python programming language from the terminal and enter the ip address and gateway of the victim machine we obtained in step 3 with the command to run.
+> With the -t command, we enter the IP address of the target computer here. 
+
+> With the -r command, we enter the IP address of the router here
+
+
+#### `When you examine our source codes, you can understand why we entered it this way :` 
+
+```console
+optparse_object.add_option("-r", "--router", dest="router_ip", help="Enter router ip address")
+```
+```console
+optparse_object.add_option("-r", "--router", dest="router_ip", help="Enter router ip address")
+```
+<img  algin="center" src="arp-cm.png"/>
+
+## Tested On 
+
+ Sr. | Operating System | Version | Virtual Box | VM Ware | Network Type |
+--- | --- | --- | --- | --- | --- |
+1 | <img align="center" src="https://img.icons8.com/color/25/000000/kali-linux.png"> Kali Linux</img> | 2021.2 | <img algin="center" src="https://badgen.net/github/status/micromatch/micromatch/4.0.1">|<img algin="center" src="https://badgen.net/github/status/micromatch/micromatch/4.0.1"> |<img algin="center" src="https://badgen.net/badge/Network/NAT/brown"> |
+2 | <img align="center" src="https://img.icons8.com/color/25/000000/kali-linux.png"> Kali Linux</img > | 2021.1 | <img algin="center" src="https://badgen.net/github/status/micromatch/micromatch/4.0.1"> | <img algin="center" src="https://badgen.net/github/status/micromatch/micromatch/4.0.1"> | <img algin="center" src="https://badgen.net/badge/Network/NAT/brown">  |
+3 | <img align="center" src="https://img.icons8.com/color/25/000000/kali-linux.png"> Kali Linux</img > | 2020.4 | <img algin="center" src="https://badgen.net/github/status/micromatch/micromatch/4.0.1">| <img algin="center" src="https://badgen.net/github/status/micromatch/micromatch/4.0.1">|<img algin="center" src="https://badgen.net/badge/Network/NAT/brown"> |
+4 | <img align="center" src="https://img.icons8.com/color/25/000000/kali-linux.png"> Kali Linux</img > | 2019.4 | <img algin="center" src="https://badgen.net/github/status/micromatch/micromatch/4.0.1">| <img algin="center" src="https://badgen.net/github/status/micromatch/micromatch/4.0.1">| <img algin="center" src="https://badgen.net/badge/Network/NAT/brown"> |
+5 | <img align="center" src="https://img.icons8.com/color/25/000000/kali-linux.png"> Kali Linux</img > | 2018.4 | <img algin="center" src="https://badgen.net/github/status/micromatch/micromatch/4.0.1">| <img algin="center" src="https://badgen.net/github/status/micromatch/micromatch/4.0.1">| <img algin="center" src="https://badgen.net/badge/Network/NAT/brown"> |
+
+---
