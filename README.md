@@ -24,8 +24,50 @@ Similar to ARP, DNS resolves domain names to IP addresses. DNS spoofing is very 
 
 #### Man in Middle Attack using ARP spoofing : 
 
-##### `Step-1 :`
+##### ` Example of a typical Network as follows :`
  >  ARP spoofing -It allows us to redirect the flow of packets in a computer network. 
-    Example of a typical Network as follows.
 <img  algin="center" src="ARPPoisoningSpoofing.png"/>
+
+---
+
+## How to do an ARP Spoof/Poisoning Attack :
+* We can do an ARP Spoof attack using the built-in tool called ARPSPOOF in Kali Linux, or we can also create an ARP Spoof attack using  python language.
+
+### Execution steps :
+##### `Step-1 :`
+* We can run the built-in “ARPSPOOF’” tool in Kali Linux. In case the ARPSPOOF tool is not present, you can install the tool by running the following command as follows.
+
+```console
+apt install dsniff
+
+```
+* Or you can write an ARP Poisoning tool yourself with the Python programming language, or you can download the ARP Poisoning tool I wrote from your terminal to your computer.
+
+```console
+git clone https://github.com/TarikKaanKoc/MITM.git
+
+```
+
+##### `Step-2 :`
+* Run the following command to enable port forwarding before performing the MITM attack.
+* If you do not run the following command in the terminal, the internet connection of the target computer may be lost when you start the attack. In this case, the target computer user may notice that an attack has occurred, and this is a situation we do not want to happen.
+* This command will again establish the Internet connectivity of the victim computer. In this way, we can become the Man-In-The-Middle by using the ARP Spoof attack. So all the requests from the victim’s computer will not directly go to the router it will flow through the from our machine 
+```console
+echo 1 > /proc/sys/net/ipv4/ip_forward 
+```
+##### `Step-3:`
+> I will explain the third stage through the ARP-Poisoning tool I wrote.
+* First we need two things to perform the attack, the IP address of the victim machine and the IP address of the Gateway. In this example, we use a Windows Machine as our victim and a Kali Machine to execute the attack.
+
+```console
+arp -a
+```
+* Output:
+This will show us the following Outputs as follows.
+Victim Machine (Windows Machine) –
+<img  algin="center" src="arp-a.png"/>
+
+* Or you can use our Net Scanner Tool instead of this method.
+
+### <a href="https://github.com/TarikKaanKoc/Net-Scanner-Tool">Click</a> for NET-SCANNER Tool.
 
